@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Alura Books</title>
 </head>
 
@@ -53,32 +53,62 @@
         <h2 class="carrossel__titulo">ÚLTIMOS LANÇAMENTOS</h2>
         <!-- Slider main container -->
         <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="assets/img/books/ApacheKafka.svg" alt="Capa do livro - ApacheKafka"></div>
-                <div class="swiper-slide"><img src="assets/img/books/Liderança.svg" alt="Capa do livro - Liderança"></div>
-                <div class="swiper-slide"><img src="assets/img/books/Javascript.svg" alt="Capa do livro - Javascript"></div>
-                ...
+                <div class="swiper-slide"><img src="assets/img/books/ApacheKafka.svg" alt="Capa do livro - ApacheKafka">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/books/Liderança.svg" alt="Capa do livro - Liderança">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/books/Javascript.svg" alt="Capa do livro - Javascript">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/books/Guia Front-end.svg"
+                        alt="Capa do livro - Guia Front-end">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/books/Portugol.svg" alt="Capa do livro - Portugol">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/books/Acessibilidade.svg"
+                        alt="Capa do livro - Acessibilidade">
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="card">
+            <div class="card__descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <img src="assets/img/Angular.svg" alt="Capa do livro Angular">
+            </div>
+            <div class="card__botoes">
+                <ul class="botoes">
+                    <li class="botoes__items"><img src="assets/img/Favoritos.svg" alt="Favoritar livro"></li>
+                    <li class="botoes__items"><img src="assets/img/Compras.svg" alt="Adicionar no Carrinho"></li>
+                </ul>
+                <a class="botoes__ancora" href="#">Saiba mais</a>
+            </div>
         </div>
     </section>
     <main>
-
     </main>
     <footer>
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
 
 </html>
