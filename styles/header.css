@@ -23,9 +23,11 @@
 .container__imagem {
     padding: 1em
 }
-.container__botao{
+
+.container__botao {
     display: none;
 }
+
 .lista-menu {
     display: none;
     position: absolute;
@@ -35,6 +37,7 @@
 
 .container__botao:checked~.lista-menu {
     display: block;
+    z-index: 9;
 }
 
 .lista-menu__titulo,
@@ -55,4 +58,58 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
+}
+.opcoes {
+    display: none;
+}
+/* ESCONDENDO ELEMENTOS DO LAYOUT MOBILE */
+.container__titulo {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo-negrito {
+        font-family: var(--font-secundaria);
+        font-size: 1.875rem;
+    }
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+    .container__titulo-negrito {
+        font-weight: 700;
+        
+    }
+    .cabecalho {
+        padding: 0 4em;
+    }
+    .cabecalho__meunu-hamburguer {
+        display: none;
+    }
+    .opcoes {
+        display: flex;
+    }
+    .opcoes__item {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 0.625rem;
+    }
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--cor-preto);
+        
+    }
+    .opcoes__botao {
+        display: none;
+    }
+    .opcoes__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+    .container__imagem-transparente {
+        display:none;
+    }
+
 }
