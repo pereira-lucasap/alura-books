@@ -20,7 +20,7 @@
     background-position: center;
     background-size: cover;
     width: 40%;
-    padding: 1em;
+    padding: 1em 0.5em;
     overflow: hidden;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .swiper-button-prev,
-swiper-button-next {
+.swiper-button-next {
     display: none;
 }
 
@@ -115,11 +115,13 @@ swiper-button-next {
 
     .swiper-pagination {
         margin: 2em 0 3em 0;
+        position: initial;
     }
 
     .swiper {
         text-align: center;
-        width: 60%;
+        padding: 0;
+        width: 80%;
         margin: auto;
     }
 
@@ -132,15 +134,25 @@ swiper-button-next {
     }
 
     .swiper-slide img {
-        width: 12rem;
-        height: 16.625rem;
-
+        padding: 1px;
+        /* width: 12rem;
+        height: 16.625rem; */
+        width: 100%;
+        /* height: 100%; */
 
     }
 
     .swiper-button-prev,
-    swiper-button-next {
-        display: none;
+    .swiper-button-next {
+        display: block;
+    }
+
+    .card {
+        margin:0 17% 1.5em 17%;
+    }
+
+    .carrossel__titulo {
+        padding: 2em 0 0.5em 0;
     }
 
 }
